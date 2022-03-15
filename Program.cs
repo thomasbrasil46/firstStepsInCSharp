@@ -6,14 +6,20 @@ namespace MeuApp
     {
         static void Main(string[] args)
         {
-            string valor = "andre";
-            switch (valor)
-            {
-                case "joao": Console.WriteLine("Não é o cara"); break;
-                case "marcelo": Console.WriteLine("Não é o cara"); break;
-                case "andre": Console.WriteLine("É o cara"); break;
-                default: Console.WriteLine("Não encontrei"); break;
-            }
+            MeuMetodo();
+
+            string nome = RetornaNome("Thomas", "Brasil");
+            Console.WriteLine(nome);
+        }
+    
+        static void MeuMetodo ()
+        {
+            Console.WriteLine("C# é legal");
+        }
+
+        static string RetornaNome(string nome, string sobrenome)
+        {
+            return nome + " " + sobrenome;
         }
     }
 }
